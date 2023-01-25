@@ -13,6 +13,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         Chasis chasis1 = new Chasis();
+        System.out.println("Introduce los siguientes datos sobre el chasis1:");
             System.out.println("Introduce el codigo de bastidor:");
             chasis1.setCodBastidor(sc.next());
             System.out.println("Introduce el modelo de chasis:");
@@ -24,6 +25,7 @@ public class Main {
             aniadirChasisUseCase.execute(chasis1);
 
         Chasis chasis2 = new Chasis();
+        System.out.println("Introduce los siguientes datos sobre el chasis2:");
             System.out.println("Introduce el codigo de bastidor:");
             chasis2.setCodBastidor(sc.next());
             System.out.println("Introduce el modelo de chasis:");
@@ -34,6 +36,7 @@ public class Main {
             aniadirChasisUseCase.execute(chasis2);
 
         Chasis chasis3 = new Chasis();
+        System.out.println("Introduce los siguientes datos sobre el chasis3:");
             System.out.println("Introduce el codigo de bastidor:");
             chasis3.setCodBastidor(sc.next());
             System.out.println("Introduce el modelo de chasis:");
@@ -44,6 +47,7 @@ public class Main {
             aniadirChasisUseCase.execute(chasis3);
 
         Chasis chasis4 = new Chasis();
+        System.out.println("Introduce los siguientes datos sobre el chasis4:");
             System.out.println("Introduce el codigo de bastidor:");
             chasis4.setCodBastidor(sc.next());
             System.out.println("Introduce el modelo de chasis:");
@@ -68,7 +72,7 @@ public class Main {
             ruedaB.setModeloAccesorio("WinterHawk");
             ruedaB.setDiametro(205);
 
-            aniadirAccesorioUseCase.execute(ruedaB);
+           aniadirAccesorioUseCase.execute(ruedaB);
 
         Motor motorA = new Motor();
             motorA.setCodigoAccesorio("1");
@@ -76,7 +80,7 @@ public class Main {
             motorA.setCilindrada(2.0);
             motorA.setCaballos(120);
 
-            aniadirAccesorioUseCase.execute(motorA);
+          aniadirAccesorioUseCase.execute(motorA);
 
         Motor motorB = new Motor();
             motorB.setCodigoAccesorio("2");
@@ -84,13 +88,13 @@ public class Main {
             motorB.setCilindrada(2.4);
             motorB.setCaballos(160);
 
-            aniadirAccesorioUseCase.execute(motorB);
+          aniadirAccesorioUseCase.execute(motorB);
 
         CuadroDeMandos cuadroDeMandosA = new CuadroDeMandos();
             cuadroDeMandosA.setCodigoAccesorio("1");
             cuadroDeMandosA.setModeloAccesorio("LM2000");
 
-            aniadirAccesorioUseCase.execute(cuadroDeMandosA);
+           aniadirAccesorioUseCase.execute(cuadroDeMandosA);
 
         CuadroDeMandos cuadroDeMandosB = new CuadroDeMandos();
             cuadroDeMandosB.setCodigoAccesorio("1");

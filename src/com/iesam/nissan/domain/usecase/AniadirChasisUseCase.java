@@ -7,6 +7,6 @@ public class AniadirChasisUseCase {
     private ChasisDataStore dataStore = ChasisDataStore.getInstance();
 
     public void execute(Chasis chasis) {
-       dataStore.añadir(chasis);
+       dataStore.aniadir(chasis);
     }
 }

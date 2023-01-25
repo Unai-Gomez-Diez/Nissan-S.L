@@ -9,8 +9,8 @@ public class AccesorioDataStore {
     private static AccesorioDataStore instance = null;
     private Map<String, Accesorio> dataStore = new TreeMap<>();
 
-    public void aniadir(Accesorio model) {
-        dataStore.put(model.getCodigoAccesorio(), model);
+    public void aniadir(Accesorio accesorio) {
+        dataStore.put(accesorio.getCodigoAccesorio(), accesorio);
     }
 
     public void eliminar(String codigo) {
@@ -23,10 +23,10 @@ public class AccesorioDataStore {
         return dataStore.get(codigo);
     }
 
-    public Accesorio modificar(Accesorio codigo) {
-        dataStore.put(codigo.getCodigoAccesorio(), codigo);
+    public Accesorio modificar(Accesorio accesorio) {
+        dataStore.put(accesorio.getCodigoAccesorio(), accesorio);
 
-        return codigo;
+        return accesorio;
     }
 
     public static AccesorioDataStore getInstance() {

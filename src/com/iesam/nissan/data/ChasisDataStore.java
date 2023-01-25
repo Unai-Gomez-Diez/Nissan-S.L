@@ -10,8 +10,8 @@ public class ChasisDataStore {
 
     private Map<String, Chasis> dataStore = new TreeMap<>();
 
-    public void añadir(Chasis model) {
-        dataStore.put(model.getCodBastidor(), model);
+    public void aniadir(Chasis chasis) {
+        dataStore.put(chasis.getCodBastidor(), chasis);
     }
 
 
