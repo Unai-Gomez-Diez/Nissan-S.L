@@ -1,7 +1,7 @@
 package com.iesam.nissan.domain.models;
 
-public class Rueda implements Accesorios{
-    private Integer codigoAccesorio;
+public class Rueda implements Accesorio {
+    private String codigoAccesorio;
     private String modeloAccesorio;
     private Integer unidadesAccesorio;
     private String marca;
@@ -9,14 +9,17 @@ public class Rueda implements Accesorios{
 
 
     @Override
-    public Integer getCodigoAccesorio() {
+    public String getCodigoAccesorio() {
         return codigoAccesorio;
     }
 
+
+
     @Override
-    public void setCodigoAccesorio(Integer codigoAccesorio) {
-        this.codigoAccesorio = codigoAccesorio;
+    public void setCodigoAccesorio(String codigoAccesorio) {
+
     }
+
 
     @Override
     public String getModeloAccesorio() {

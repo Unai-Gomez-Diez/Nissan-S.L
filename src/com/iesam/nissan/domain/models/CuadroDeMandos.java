@@ -1,17 +1,19 @@
 package com.iesam.nissan.domain.models;
 
-public class CuadroDeMandos implements Accesorios{
-    private Integer codigoAccesorio;
+public class CuadroDeMandos implements Accesorio {
+    private String codigoAccesorio;
     private String modeloAccesorio;
     private Integer unidadesAccesorio;
 
     @Override
-    public Integer getCodigoAccesorio() {
+    public String getCodigoAccesorio() {
         return codigoAccesorio;
     }
 
+
+
     @Override
-    public void setCodigoAccesorio(Integer codigoAccesorio) {
+    public void setCodigoAccesorio(String codigoAccesorio) {
         this.codigoAccesorio = codigoAccesorio;
     }
 

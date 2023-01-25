@@ -1,19 +1,21 @@
 package com.iesam.nissan.domain.models;
 
-public class Motor implements Accesorios{
-    private Integer codigoAccesorio;
+public class Motor implements Accesorio {
+    private String codigoAccesorio;
     private String modeloAccesorio;
     private Integer unidadesAccesorio;
     private Integer cilindrada;
     private Integer caballos;
 
     @Override
-    public Integer getCodigoAccesorio() {
+    public String getCodigoAccesorio() {
         return codigoAccesorio;
     }
 
+
+
     @Override
-    public void setCodigoAccesorio(Integer codigoAccesorio) {
+    public void setCodigoAccesorio(String codigoAccesorio) {
         this.codigoAccesorio = codigoAccesorio;
     }
 
