@@ -30,7 +30,7 @@ public class Rueda implements Accesorios{
 
     @Override
     public Integer getUnidadesAccesorio() {
-        return null;
+        return unidadesAccesorio;
     }
 
 
