@@ -10,6 +10,10 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        Integer num=null;
+        String rueda1 = null,rueda2=null,rueda3=null,rueda4=null;
+        String motor1=null,motor2=null,motor3=null,motor4=null;
+        String cuadrodeMando1=null,cuadrodeMando2=null,cuadrodeMando3=null,cuadrodeMando4=null;
 
         Chasis chasis1 = new Chasis();
         System.out.println("Introduce los siguientes datos sobre el chasis1:");
@@ -103,19 +107,41 @@ public class Main {
         // aniadirAccesorioUseCase.execute(cuadroDeMandosB);
 
             System.out.println("Que compoenetes quieres que tenga el Chasis1");
+            do{
+                System.out.println("¿Que ruedas se van ha montar en este chasis?");
+                System.out.println("Las ruedas son...");
+                System.out.println("Presiona el numero 1 para elegir la siguiente rueda "+ruedaA.getCodigoAccesorio()+":"+ruedaA.getMarca()+":"+ruedaA.getModeloAccesorio()+":"+ruedaA.getDiametro());
+                System.out.println("Presiona el numero 2 para elegir la siguiente rueda "+ruedaB.getCodigoAccesorio()+":"+ruedaB.getMarca()+":"+ruedaB.getModeloAccesorio()+":"+ruedaB.getDiametro());
+                num = sc.nextInt();
+                if(num==1){
+                    rueda1= ruedaA.getCodigoAccesorio()+":"+ruedaA.getModeloAccesorio();
+                    num=1;
+                } else if (num==2) {
+                    rueda1= ruedaB.getCodigoAccesorio()+":"+ruedaB.getModeloAccesorio();
+                    num=1;
+                }
+            }while(num!=1);
+
+        do{
             System.out.println("¿Que ruedas se van ha montar en este chasis?");
             System.out.println("Las ruedas son...");
-            System.out.println("Presiona el numero 1 para elegir la siguiente rueda "+ruedaA.getCodigoAccesorio()+":"+ruedaA.getMarca()+":"+ruedaA.getModeloAccesorio()+":"+ruedaA.getDiametro());
-            System.out.println("Presiona el numero 2 para elegir la siguiente rueda "+ruedaB.getCodigoAccesorio()+":"+ruedaB.getMarca()+":"+ruedaB.getModeloAccesorio()+":"+ruedaB.getDiametro());
-            Integer num = sc.nextInt();
+            System.out.println("Presiona el numero 1 para elegir el siguiente motor "+motorA.getCodigoAccesorio()+":"+motorA.getModeloAccesorio()+":"+motorA.getCilindrada()+":"+motorA.getCaballos());
+            System.out.println("Presiona el numero 2 para elegir el siguiente motor "+motorB.getCodigoAccesorio()+":"+motorB.getModeloAccesorio()+":"+motorB.getCilindrada()+":"+motorB.getCaballos());
+            num = sc.nextInt();
             if(num==1){
+                motor1= motorA.getCodigoAccesorio()+":"+motorA.getModeloAccesorio();
+                num=1;
+            } else if (num==2) {
+                motor1= motorB.getCodigoAccesorio()+":"+motorB.getModeloAccesorio();
+                num=1;
+            }
+        }while(num!=1);
 
-        }
         System.out.println("MENU");
         System.out.println("----");
 
-        System.out.println("- Chasis " + chasis1.getCodBastidor() +": Lleva montado Rueda " + ruedaA.getCodigoAccesorio() + ", Motor "
-                + motorB.getCodigoAccesorio() + " y Cuadro de Mando" + cuadroDeMandosA.getCodigoAccesorio());
+        System.out.println("- Chasis " + chasis1.getCodBastidor() +": Lleva montado Rueda " + rueda1 + ", Motor "
+                + motor1 + " y Cuadro de Mando" + cuadrodeMando1);
 
         System.out.println("- Chasis " + chasis2.getCodBastidor() + ": Lleva montado Rueda" + ruedaB.getCodigoAccesorio() + ", Motor "
                 + motorB.getCodigoAccesorio() + " y Cuadro de Mando" + cuadroDeMandosB.getCodigoAccesorio());
