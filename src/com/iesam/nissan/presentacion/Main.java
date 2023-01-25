@@ -1,6 +1,5 @@
 package com.iesam.nissan.presentacion;
 
-import com.iesam.nissan.data.AccesorioDataStore;
 import com.iesam.nissan.domain.models.*;
 import com.iesam.nissan.domain.usecase.AniadirAccesorioUseCase;
 import com.iesam.nissan.domain.usecase.AniadirChasisUseCase;
@@ -64,7 +63,7 @@ public class Main {
             ruedaA.setDiametro(185);
 
         AniadirAccesorioUseCase aniadirAccesorioUseCase = new AniadirAccesorioUseCase();
-            aniadirAccesorioUseCase.execute(ruedaA);
+        //    aniadirAccesorioUseCase.execute(ruedaA);
 
         Rueda ruedaB = new Rueda();
             ruedaB.setCodigoAccesorio("2");
@@ -72,7 +71,7 @@ public class Main {
             ruedaB.setModeloAccesorio("WinterHawk");
             ruedaB.setDiametro(205);
 
-           aniadirAccesorioUseCase.execute(ruedaB);
+         //  aniadirAccesorioUseCase.execute(ruedaB);
 
         Motor motorA = new Motor();
             motorA.setCodigoAccesorio("1");
@@ -80,7 +79,7 @@ public class Main {
             motorA.setCilindrada(2.0);
             motorA.setCaballos(120);
 
-          aniadirAccesorioUseCase.execute(motorA);
+       //   aniadirAccesorioUseCase.execute(motorA);
 
         Motor motorB = new Motor();
             motorB.setCodigoAccesorio("2");
@@ -88,7 +87,7 @@ public class Main {
             motorB.setCilindrada(2.4);
             motorB.setCaballos(160);
 
-          aniadirAccesorioUseCase.execute(motorB);
+       //   aniadirAccesorioUseCase.execute(motorB);
 
         CuadroDeMandos cuadroDeMandosA = new CuadroDeMandos();
             cuadroDeMandosA.setCodigoAccesorio("1");
@@ -100,12 +99,22 @@ public class Main {
             cuadroDeMandosB.setCodigoAccesorio("1");
             cuadroDeMandosB.setModeloAccesorio("LM6000");
 
-            aniadirAccesorioUseCase.execute(cuadroDeMandosB);
+         //1
+        // aniadirAccesorioUseCase.execute(cuadroDeMandosB);
 
+            System.out.println("Que compoenetes quieres que tenga el Chasis1");
+            System.out.println("¿Que ruedas se van ha montar en este chasis?");
+            System.out.println("Las ruedas son...");
+            System.out.println("Presiona el numero 1 para elegir la siguiente rueda "+ruedaA.getCodigoAccesorio()+":"+ruedaA.getMarca()+":"+ruedaA.getModeloAccesorio()+":"+ruedaA.getDiametro());
+            System.out.println("Presiona el numero 2 para elegir la siguiente rueda "+ruedaB.getCodigoAccesorio()+":"+ruedaB.getMarca()+":"+ruedaB.getModeloAccesorio()+":"+ruedaB.getDiametro());
+            Integer num = sc.nextInt();
+            if(num==1){
+
+        }
         System.out.println("MENU");
         System.out.println("----");
 
-        System.out.println("- Chasis " + chasis1.getCodBastidor() + ": Lleva montado Rueda " + ruedaA.getCodigoAccesorio() + ", Motor "
+        System.out.println("- Chasis " + chasis1.getCodBastidor() +": Lleva montado Rueda " + ruedaA.getCodigoAccesorio() + ", Motor "
                 + motorB.getCodigoAccesorio() + " y Cuadro de Mando" + cuadroDeMandosA.getCodigoAccesorio());
 
         System.out.println("- Chasis " + chasis2.getCodBastidor() + ": Lleva montado Rueda" + ruedaB.getCodigoAccesorio() + ", Motor "
@@ -116,5 +125,8 @@ public class Main {
 
         System.out.println("- Chasis " + chasis4.getCodBastidor() + ": Lleva montado Rueda " + ruedaA.getCodigoAccesorio() + ", Motor "
                 + motorA.getCodigoAccesorio() + " y Cuadro de Mando" + cuadroDeMandosB.getCodigoAccesorio());
+
+
+
     }
 }
