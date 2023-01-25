@@ -4,7 +4,7 @@ public class Motor implements Accesorio {
     private String codigoAccesorio;
     private String modeloAccesorio;
     private Integer unidadesAccesorio;
-    private Integer cilindrada;
+    private Double cilindrada;
     private Integer caballos;
 
     @Override
@@ -39,11 +39,11 @@ public class Motor implements Accesorio {
         this.unidadesAccesorio = unidadesAccesorio;
     }
 
-    public Integer getCilindrada() {
+    public Double getCilindrada() {
         return cilindrada;
     }
 
-    public void setCilindrada(Integer cilindrada) {
+    public void setCilindrada(Double cilindrada) {
         this.cilindrada = cilindrada;
     }
 

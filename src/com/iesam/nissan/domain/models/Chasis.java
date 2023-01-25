@@ -2,8 +2,8 @@ package com.iesam.nissan.domain.models;
 
 public class Chasis {
     private String codBastidor;
-    private String modeloBastidor;
-    private String marcaBastidor;
+    private String modeloChasis;
+    private String marcaChasis;
     public String getCodBastidor() {
         return codBastidor;
     }
@@ -14,19 +14,19 @@ public class Chasis {
 
 
 
-    public String getModeloBastidor() {
-        return modeloBastidor;
+    public String getModeloChasis() {
+        return modeloChasis;
     }
 
-    public void setModeloBastidor(String modeloBastidor) {
-        this.modeloBastidor = modeloBastidor;
+    public void setModeloChasis(String modeloChasis) {
+        this.modeloChasis = modeloChasis;
     }
 
-    public String getMarcaBastidor() {
-        return marcaBastidor;
+    public String getMarcaChasis() {
+        return marcaChasis;
     }
 
-    public void setMarcaBastidor(String marcaBastidor) {
-        this.marcaBastidor = marcaBastidor;
+    public void setMarcaChasis(String marcaChasis) {
+        this.marcaChasis = marcaChasis;
     }
 }

@@ -9,7 +9,7 @@ public class AccesorioDataStore {
     private static AccesorioDataStore instance = null;
     private Map<String, Accesorio> dataStore = new TreeMap<>();
 
-    public void añadir(Accesorio model) {
+    public void aniadir(Accesorio model) {
         dataStore.put(model.getCodigoAccesorio(), model);
     }
 
