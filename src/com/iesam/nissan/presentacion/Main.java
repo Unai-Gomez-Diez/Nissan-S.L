@@ -446,6 +446,12 @@ public class Main {
         System.out.println("- Chasis " + chasis4.getCodBastidor() + ": Lleva montado Rueda " + rueda4 + ", Motor "
                 + motor4 + " y Cuadro de Mando" + cuadrodeMando4);
 
-
+        System.out.println("Tienes un total de"+ruedaA.getUnidadesAccesorio()+" de la rueda "+ruedaA.getCodigoAccesorio()+":"+ruedaA.getMarca()+":"+ruedaA.getModeloAccesorio()+":"+ruedaA.getDiametro());
+        System.out.println("Tienes un total de"+ruedaB.getUnidadesAccesorio()+" de la rueda "+ruedaB.getCodigoAccesorio()+":"+ruedaB.getMarca()+":"+ruedaB.getModeloAccesorio()+":"+ruedaB.getDiametro());
+        System.out.println("Tienes un total de"+motorA.getUnidadesAccesorio()+" del motor " +motorA.getCodigoAccesorio()+":"+motorA.getModeloAccesorio()+":"+motorA.getCilindrada()+":"+motorA.getCaballos());
+        System.out.println("Tienes un total de"+motorB.getUnidadesAccesorio()+" del motor "+motorB.getCodigoAccesorio()+":"+motorB.getModeloAccesorio()+":"+motorB.getCilindrada()+":"+motorB.getCaballos());
+        System.out.println("Tienes un total de"+cuadroDeMandosA.getUnidadesAccesorio()+" del cuadro de mandos "+cuadroDeMandosA.getCodigoAccesorio()+":"+cuadroDeMandosA.getModeloAccesorio());
+        System.out.println("Tienes un total de"+cuadroDeMandosB.getUnidadesAccesorio()+" del cuadro de mandos "+cuadroDeMandosB.getCodigoAccesorio()+":"+cuadroDeMandosB.getModeloAccesorio());
     }
+
 }
