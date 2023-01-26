@@ -82,10 +82,14 @@ public class Main {
             }
         }while (num!=1);
 
+        do{
+            System.out.println("Cuantas unidades de la rueda "+ruedaA.getCodigoAccesorio()+":"+ruedaA.getMarca()+":"+ruedaA.getModeloAccesorio()+":"+ruedaA.getDiametro()+" tienes?");
+            ruedaA.setUnidadesAccesorio(sc.nextInt());
+        }while(ruedaA.getUnidadesAccesorio()<5);
 
 
         AniadirAccesorioUseCase aniadirAccesorioUseCase = new AniadirAccesorioUseCase();
-        //    aniadirAccesorioUseCase.execute(ruedaA);
+            aniadirAccesorioUseCase.execute(ruedaA);
 
         Rueda ruedaB = new Rueda();
         do{
@@ -108,8 +112,11 @@ public class Main {
             num=1;
         }
     }while (num!=1);
-
-         //  aniadirAccesorioUseCase.execute(ruedaB);
+        do{
+            System.out.println("Cuantas unidades de la rueda "+ruedaB.getCodigoAccesorio()+":"+ruedaB.getMarca()+":"+ruedaB.getModeloAccesorio()+":"+ruedaB.getDiametro()+" tienes?");
+            ruedaB.setUnidadesAccesorio(sc.nextInt());
+        }while(ruedaB.getUnidadesAccesorio()<3);
+           aniadirAccesorioUseCase.execute(ruedaB);
 
         Motor motorA = new Motor();
         do{
@@ -132,7 +139,13 @@ public class Main {
             num=1;
         }
     }while (num!=1);
-       //   aniadirAccesorioUseCase.execute(motorA);
+
+        do{
+            System.out.println("Cuantas unidades de la rueda "+motorA.getCodigoAccesorio()+":"+motorA.getModeloAccesorio()+":"+motorA.getCilindrada()+":"+motorA.getCaballos()+" tienes?");
+            motorA.setUnidadesAccesorio(sc.nextInt());
+        }while(motorA.getUnidadesAccesorio()<2);
+
+          aniadirAccesorioUseCase.execute(motorA);
 
         Motor motorB = new Motor();
         do{
@@ -155,7 +168,11 @@ public class Main {
             num=1;
         }
     }while (num!=1);
-       //   aniadirAccesorioUseCase.execute(motorB);
+        do{
+            System.out.println("Cuantas unidades de la rueda "+motorB.getCodigoAccesorio()+":"+motorB.getModeloAccesorio()+":"+motorB.getCilindrada()+":"+motorB.getCaballos()+" tienes?");
+            motorB.setUnidadesAccesorio(sc.nextInt());
+        }while(motorB.getUnidadesAccesorio()<2);
+          aniadirAccesorioUseCase.execute(motorB);
 
         CuadroDeMandos cuadroDeMandosA = new CuadroDeMandos();
             cuadroDeMandosA.setCodigoAccesorio("1");
@@ -174,10 +191,14 @@ public class Main {
             num=1;
         }
     }while (num!=1);
+        do{
+            System.out.println("Cuantas unidades de la rueda "+cuadroDeMandosA.getCodigoAccesorio()+":"+cuadroDeMandosA.getModeloAccesorio()+" tienes?");
+            cuadroDeMandosA.setUnidadesAccesorio(sc.nextInt());
+        }while(cuadroDeMandosA.getUnidadesAccesorio()<4);
            aniadirAccesorioUseCase.execute(cuadroDeMandosA);
 
         CuadroDeMandos cuadroDeMandosB = new CuadroDeMandos();
-            cuadroDeMandosB.setCodigoAccesorio("1");
+            cuadroDeMandosB.setCodigoAccesorio("2");
             cuadroDeMandosB.setModeloAccesorio("LM6000");
         do{
             System.out.println("Quieres modificar el cuadro de mandos o dejar la que estaba");
@@ -194,7 +215,11 @@ public class Main {
             }
         }while (num!=1);
          //1
-        // aniadirAccesorioUseCase.execute(cuadroDeMandosB);
+        do{
+            System.out.println("Cuantas unidades de la rueda "+cuadroDeMandosB.getCodigoAccesorio()+":"+cuadroDeMandosB.getModeloAccesorio()+" tienes?");
+            cuadroDeMandosB.setUnidadesAccesorio(sc.nextInt());
+        }while(cuadroDeMandosB.getUnidadesAccesorio()<2);
+        aniadirAccesorioUseCase.execute(cuadroDeMandosB);
 
         ///Crear el chasis 1
             System.out.println("Que compoenetes quieres que tenga el Chasis1");
@@ -207,9 +232,11 @@ public class Main {
                 if(num==1){
                     rueda1= ruedaA.getCodigoAccesorio()+":"+ruedaA.getModeloAccesorio();
                     num=1;
+                    ruedaA.setUnidadesAccesorio(ruedaA.getUnidadesAccesorio()-1);
                 } else if (num==2) {
                     rueda1= ruedaB.getCodigoAccesorio()+":"+ruedaB.getModeloAccesorio();
                     num=1;
+                    ruedaB.setUnidadesAccesorio(ruedaB.getUnidadesAccesorio()-1);
                 }
             }while(num!=1);
 
@@ -222,9 +249,11 @@ public class Main {
             if(num==1){
                 motor1= motorA.getCodigoAccesorio()+":"+motorA.getModeloAccesorio();
                 num=1;
+                motorA.setUnidadesAccesorio(motorA.getUnidadesAccesorio()-1);
             } else if (num==2) {
                 motor1= motorB.getCodigoAccesorio()+":"+motorB.getModeloAccesorio();
                 num=1;
+                motorB.setUnidadesAccesorio(motorB.getUnidadesAccesorio()-1);
             }
         }while(num!=1);
         do{
@@ -236,9 +265,11 @@ public class Main {
             if(num==1){
                 cuadrodeMando1= cuadroDeMandosA.getCodigoAccesorio()+":"+cuadroDeMandosA.getModeloAccesorio();
                 num=1;
+                cuadroDeMandosA.setUnidadesAccesorio(cuadroDeMandosA.getUnidadesAccesorio()-1);
             } else if (num==2) {
                 cuadrodeMando1= cuadroDeMandosB.getCodigoAccesorio()+":"+cuadroDeMandosB.getModeloAccesorio();
                 num=1;
+                cuadroDeMandosB.setUnidadesAccesorio(cuadroDeMandosB.getUnidadesAccesorio()-1);
             }
         }while(num!=1);
 
@@ -254,9 +285,11 @@ public class Main {
             if(num==1){
                 rueda2= ruedaA.getCodigoAccesorio()+":"+ruedaA.getModeloAccesorio();
                 num=1;
+                ruedaA.setUnidadesAccesorio(ruedaA.getUnidadesAccesorio()-1);
             } else if (num==2) {
                 rueda2= ruedaB.getCodigoAccesorio()+":"+ruedaB.getModeloAccesorio();
                 num=1;
+                ruedaB.setUnidadesAccesorio(ruedaB.getUnidadesAccesorio()-1);
             }
         }while(num!=1);
 
@@ -269,9 +302,11 @@ public class Main {
             if(num==1){
                 motor2= motorA.getCodigoAccesorio()+":"+motorA.getModeloAccesorio();
                 num=1;
+                motorA.setUnidadesAccesorio(motorA.getUnidadesAccesorio()-1);
             } else if (num==2) {
                 motor2= motorB.getCodigoAccesorio()+":"+motorB.getModeloAccesorio();
                 num=1;
+                motorB.setUnidadesAccesorio(motorB.getUnidadesAccesorio()-1);
             }
         }while(num!=1);
         do{
@@ -283,9 +318,11 @@ public class Main {
             if(num==1){
                 cuadrodeMando2= cuadroDeMandosA.getCodigoAccesorio()+":"+cuadroDeMandosA.getModeloAccesorio();
                 num=1;
+                cuadroDeMandosA.setUnidadesAccesorio(cuadroDeMandosA.getUnidadesAccesorio()-1);
             } else if (num==2) {
                 cuadrodeMando2= cuadroDeMandosB.getCodigoAccesorio()+":"+cuadroDeMandosB.getModeloAccesorio();
                 num=1;
+                cuadroDeMandosB.setUnidadesAccesorio(cuadroDeMandosB.getUnidadesAccesorio()-1);
             }
         }while(num!=1);
 
@@ -300,9 +337,11 @@ public class Main {
             if(num==1){
                 rueda3= ruedaA.getCodigoAccesorio()+":"+ruedaA.getModeloAccesorio();
                 num=1;
+                ruedaA.setUnidadesAccesorio(ruedaA.getUnidadesAccesorio()-1);
             } else if (num==2) {
                 rueda3= ruedaB.getCodigoAccesorio()+":"+ruedaB.getModeloAccesorio();
                 num=1;
+                ruedaB.setUnidadesAccesorio(ruedaB.getUnidadesAccesorio()-1);
             }
         }while(num!=1);
 
@@ -315,9 +354,11 @@ public class Main {
             if(num==1){
                 motor3= motorA.getCodigoAccesorio()+":"+motorA.getModeloAccesorio();
                 num=1;
+                motorA.setUnidadesAccesorio(motorA.getUnidadesAccesorio()-1);
             } else if (num==2) {
                 motor3= motorB.getCodigoAccesorio()+":"+motorB.getModeloAccesorio();
                 num=1;
+                motorB.setUnidadesAccesorio(motorB.getUnidadesAccesorio()-1);
             }
         }while(num!=1);
         do{
@@ -329,9 +370,11 @@ public class Main {
             if(num==1){
                 cuadrodeMando3= cuadroDeMandosA.getCodigoAccesorio()+":"+cuadroDeMandosA.getModeloAccesorio();
                 num=1;
+                cuadroDeMandosA.setUnidadesAccesorio(cuadroDeMandosA.getUnidadesAccesorio()-1);
             } else if (num==2) {
                 cuadrodeMando3= cuadroDeMandosB.getCodigoAccesorio()+":"+cuadroDeMandosB.getModeloAccesorio();
                 num=1;
+                cuadroDeMandosB.setUnidadesAccesorio(cuadroDeMandosB.getUnidadesAccesorio()-1);
             }
         }while(num!=1);
 
@@ -346,9 +389,11 @@ public class Main {
             if(num==1){
                 rueda4= ruedaA.getCodigoAccesorio()+":"+ruedaA.getModeloAccesorio();
                 num=1;
+                ruedaA.setUnidadesAccesorio(ruedaA.getUnidadesAccesorio()-1);
             } else if (num==2) {
                 rueda4= ruedaB.getCodigoAccesorio()+":"+ruedaB.getModeloAccesorio();
                 num=1;
+                ruedaB.setUnidadesAccesorio(ruedaB.getUnidadesAccesorio()-1);
             }
         }while(num!=1);
 
@@ -361,9 +406,11 @@ public class Main {
             if(num==1){
                 motor4= motorA.getCodigoAccesorio()+":"+motorA.getModeloAccesorio();
                 num=1;
+                motorA.setUnidadesAccesorio(motorA.getUnidadesAccesorio()-1);
             } else if (num==2) {
                 motor4= motorB.getCodigoAccesorio()+":"+motorB.getModeloAccesorio();
                 num=1;
+                motorB.setUnidadesAccesorio(motorB.getUnidadesAccesorio()-1);
             }
         }while(num!=1);
         do{
@@ -375,9 +422,11 @@ public class Main {
             if(num==1){
                 cuadrodeMando4= cuadroDeMandosA.getCodigoAccesorio()+":"+cuadroDeMandosA.getModeloAccesorio();
                 num=1;
+                cuadroDeMandosA.setUnidadesAccesorio(cuadroDeMandosA.getUnidadesAccesorio()-1);
             } else if (num==2) {
                 cuadrodeMando4= cuadroDeMandosB.getCodigoAccesorio()+":"+cuadroDeMandosB.getModeloAccesorio();
                 num=1;
+                cuadroDeMandosB.setUnidadesAccesorio(cuadroDeMandosB.getUnidadesAccesorio()-1);
             }
         }while(num!=1);
 
