@@ -1,5 +1,7 @@
 package com.iesam.nissan.domain.models;
 
+import java.util.Scanner;
+
 public class Rueda implements Accesorio {
     private String codigoAccesorio;
     private String modeloAccesorio;
@@ -17,7 +19,7 @@ public class Rueda implements Accesorio {
 
     @Override
     public void setCodigoAccesorio(String codigoAccesorio) {
-
+this.codigoAccesorio=codigoAccesorio;
     }
 
 
@@ -58,4 +60,5 @@ public class Rueda implements Accesorio {
     public void setDiametro(Integer diametro) {
         this.diametro = diametro;
     }
+
 }
